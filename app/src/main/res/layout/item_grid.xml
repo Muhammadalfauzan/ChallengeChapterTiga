@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardPreventCornerOverlap="true"
+    android:id="@+id/item_list">
+
+
+        <ImageView
+            android:id="@+id/img_itemgrid"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+
+            android:src="@drawable/ayam"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textViewmkn_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:text="AYAM BAKAR"/>
+        <TextView
+            android:id="@+id/txt_hargaP_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_marginTop="240dp"
+            android:textSize="20sp"
+
+            android:text="Rp.40.000"/>
+<!--    <TextView
+
+        android:id="@+id/txt_namaMkn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="5dp"
+        android:text="Ayam Bakar"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_namaMkn"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/img_item"
+        android:paddingTop="10dp"
+        android:text="Rp.28.000" />-->
+
+</androidx.cardview.widget.CardView>
