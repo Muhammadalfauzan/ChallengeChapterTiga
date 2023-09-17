@@ -1,36 +1,45 @@
 package com.example.challengechaptertiga
 
 import android.view.LayoutInflater
+
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+
+
 import androidx.recyclerview.widget.RecyclerView
 import com.example.challengechaptertiga.databinding.ItemListBinding
 
 
-class AdapterHome ( private val listMenu : ArrayList<ListData> ) :RecyclerView.Adapter<AdapterHome.ItemViewHolder>() {
 
-    private var binding : ItemListBinding?=null
-    inner class ItemViewHolder(itemBinding: ItemListBinding): RecyclerView.ViewHolder(itemBinding.root){
+class AdapterHome ( private val listMenu : ArrayList<ListData> ) :RecyclerView.Adapter<AdapterHome.ViewHolder>() {
 
-        val gambar : ImageView= itemView.findViewById(R.id.img_item1)
-        val namaMkn : TextView = itemView.findViewById(R.id.txt_namaMkn1)
-        val harga : TextView = itemView.findViewById(R.id.txt_harga1)
+    private lateinit var listener: onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemClick(nama: String, harga: String, image:Int, deskripsi : String,lokasi : String)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterHome.ItemViewHolder {
-       binding = ItemListBinding.inflate(
-           LayoutInflater.from(parent.context),
-           parent,false
-       )
-        return ItemViewHolder(binding!!)
+    class ViewHolder(val binding: ItemListBinding): RecyclerView.ViewHolder(binding.root) {
 
     }
 
-    override fun onBindViewHolder(holder: AdapterHome.ItemViewHolder, position: Int) {
-        holder.gambar.setImageResource(listMenu[position].gambar)
-        holder.namaMkn.text = listMenu[position].judul
-        holder.harga.text = listMenu[position].harga
+    fun setOnItemClickListener(listener: onItemClickListener){
+        this.listener = listener
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = ItemListBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.binding.imgItem1.setImageResource(listMenu[position].gambar)
+        holder.binding.txtNamaMkn1.text = listMenu[position].judul
+        holder.binding.txtHarga1.text = listMenu[position].harga
+
+        holder.binding.root.setOnClickListener {
+            listener.onItemClick(listMenu[position].judul, listMenu[position].harga,listMenu[position].gambar,listMenu[position].deskripsi,listMenu[position].lokasi)
+        }
+
     }
 
     override fun getItemCount(): Int {

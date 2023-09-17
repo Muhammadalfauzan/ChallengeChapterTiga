@@ -1,3 +1,5 @@
 package com.example.challengechaptertiga
 
-data class ListData(val gambar : Int, val judul: String, val harga : String)
+import java.io.Serializable
+
+data class ListData(val gambar : Int, val judul: String, val harga : String, val deskripsi : String, var lokasi : String)

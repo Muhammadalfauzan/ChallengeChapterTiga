@@ -10,6 +10,7 @@
     android:id="@+id/item_list">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/id_cardlist"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="5dp"

@@ -21,8 +21,14 @@
         android:name="com.example.challengechaptertiga.FragmentDetail"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
+
+        <argument
+            android:name="menuId"
+            app:argType="string"/>
         <action
             android:id="@+id/action_fragmentDetail_to_fragmentHome"
-            app:destination="@id/fragmentHome" />
+            app:destination="@id/fragmentHome"
+            app:popUpTo="@id/fragmentHome"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
