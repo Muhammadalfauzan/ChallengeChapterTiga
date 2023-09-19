@@ -10,15 +10,18 @@ import android.view.ViewGroup
 import com.example.challengechaptertiga.databinding.FragmentDetailBinding
 
 
+
 class FragmentDetail : Fragment() {
     private var _binding : FragmentDetailBinding?                           = null
     private val binding get()                                                = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentDetailBinding.inflate(inflater,container,false)
         return binding?.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,11 +43,15 @@ class FragmentDetail : Fragment() {
         binding.tvDeskripsi.setText(deskripsi)
         binding.tvLokasi.setText(lokasi)
 
+        //implementasi inten implisit data di ambil dari list data "lokasi" yang di jadikan uri tiap alamatnya
+
+        binding.tvLokasi.setOnClickListener{
+            val gmmIntentUri = Uri.parse("geo:0,0?q=${Uri.encode(lokasi)}")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            startActivity(mapIntent)
+        }
 
 
-        val gmmIntentUri = Uri.parse("$lokasi")
-        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-        startActivity(mapIntent)
     }
 }

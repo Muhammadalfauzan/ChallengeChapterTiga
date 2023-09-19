@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentHomeYA"
     tools:context=".FragmentHome">
-
-   <!-- <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">-->
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView"
@@ -120,7 +110,6 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="18dp"
-                    android:layout_marginEnd="18dp"
                     android:layout_marginBottom="18dp"
                     app:cardCornerRadius="20dp">
 
@@ -186,16 +175,16 @@
                     <ImageView
                         android:id="@+id/img_nasi"
                         android:layout_width="97dp"
-                        android:layout_height="60dp"
+                        android:layout_height="65dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/nasi" />
+                        android:src="@drawable/salmonsusi" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Nasi"
+                        android:text="Seafood"
                         android:textSize="16sp" />
 
 
@@ -213,14 +202,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="65dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/nasi" />
+                        android:src="@drawable/snack" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Nasi"
+                        android:text="Snack"
                         android:textSize="16sp" />
 
                 </androidx.cardview.widget.CardView>
@@ -237,14 +226,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="65dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/nasi" />
+                        android:src="@drawable/minum" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Nasi"
+                        android:text="Minum"
                         android:textSize="16sp" />
 
                 </androidx.cardview.widget.CardView>
@@ -260,14 +249,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="65dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/nasi" />
+                        android:src="@drawable/miegacoan" />
 
                     <TextView
                         android:layout_width="95dp"
                         android:layout_height="34dp"
                         android:layout_marginTop="60dp"
                         android:gravity="center"
-                        android:text="Nasi"
+                        android:text="Mie"
                         android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -316,20 +305,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">-->
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
-                app:layout_constraintVertical_bias="0.0" />
-            <!--  </RelativeLayout>-->
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+    <!--  </RelativeLayout>-->
 
    <!-- </ScrollView>-->
 
@@ -339,4 +325,4 @@
 
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
