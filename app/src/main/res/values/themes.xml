@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ChallengeChapterTiga" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ... Konfigurasi lainnya ... -->
+        <item name="colorPrimary">#008000</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- ... Konfigurasi lainnya ... -->
     </style>
+
+
 
     <style name="Theme.ChallengeChapterTiga" parent="Base.Theme.ChallengeChapterTiga" />
 </resources>
+
+    <!--   <style name="Base.Theme.ChallengeChapterTiga" parent="Theme.Material3.DayNight.NoActionBar">
+           &lt;!&ndash; Customize your light theme here. &ndash;&gt;
+            <item name="colorPrimary">@color/my_light_primary</item>
+       </style>-->

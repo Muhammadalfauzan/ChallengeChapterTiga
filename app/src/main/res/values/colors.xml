@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/primary_material_dark</color>
+    <color name="colorPrimary">@color/colorLightPrimary</color>
     <color name="colorPrimaryDark">@color/primary_dark_material_dark</color>
     <color name ="colorLightPrimary"> @color/my_light_primary</color>
     <color name="black">#FF000000</color>
@@ -9,7 +9,7 @@
     <color name="test">#ff2800</color>
     <color name="my_light_primary">#673AB7</color>
 </resources>
-
+   <!-- @color/primary_material_dark-->
 
 <!--
 <?xml version="1.0" encoding="utf-8"?>

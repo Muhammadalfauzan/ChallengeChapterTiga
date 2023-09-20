@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.example.challengechaptertiga.FragmentHome"
-        android:label="fragment_home"
+        android:label="Menu Resto"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_fragmentDetail"
@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/fragmentDetail"
         android:name="com.example.challengechaptertiga.FragmentDetail"
-        android:label="fragment_detail"
+        android:label="Detail Menu"
         tools:layout="@layout/fragment_detail" >
 
         <argument
